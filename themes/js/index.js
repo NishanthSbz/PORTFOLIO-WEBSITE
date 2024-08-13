@@ -151,3 +151,16 @@ $(function() {
 });
 
 
+
+// for down arrow
+$(document).ready(function () {
+  $('#scroll-down-arrow').on('click', function (e) {
+      e.preventDefault(); // Prevent the default anchor behavior
+
+      $('html, body').animate({
+          scrollTop: $('#about').offset().top
+      }, 1000); // Adjust the duration for the scroll effect (in milliseconds)
+  });
+});
+
+
