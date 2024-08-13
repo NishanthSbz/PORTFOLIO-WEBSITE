@@ -11,6 +11,7 @@
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 ::-webkit-scrollbar{
     width: 4px;
@@ -46,14 +47,14 @@ input[type=number] {
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
+      flex-direction: row;
       height:100vh;
       position: fixed;
       z-index:100;
       font-family: poppins;
       background-color: #202020;
       color: whitesmoke;
-      font-size: 70px;
+      font-size: 8vw;
       width: 100%;
   }
 body{
@@ -69,7 +70,7 @@ body{
     flex-direction: column;
   }
 #header{
-    background:#171717;
+    background:#000000;
     height: auto; /* Full viewport height */
   width: 100%;
     overflow: hidden;
@@ -238,6 +239,7 @@ body{
     background-position: center;
     width: 40%;   
     height: 100vh;
+    z-index: 999;
 
 }
 .header-content{
@@ -268,7 +270,8 @@ body{
     z-index: 2;
     font-weight:700;
     font-family: poppins;
-    font-size: 65px;
+    font-variant: small-caps;
+    font-size: 105px;
 }
 .header-content .secondline{
     z-index: 2;
@@ -679,8 +682,8 @@ body{
 }
 .html-prog{
    width:100%;
-   height:40px;
-   border-radius: 10px;
+   height:30px;
+   border-radius: 15px;
    background: #191919;
    box-shadow:0px 0px 25px rgb(0,0,0,.1);
    position: relative;
@@ -709,11 +712,11 @@ body{
     font-family: poppins;
     justify-content: center;
     transition: all .4s ease;
-    width:90%;
+    width:80%;
     border-radius: 10px;
     background: #c70039;
 }
-.adobe-progress{
+.figma-progress{
     position: absolute;
     top:10%;
     left:1%;
@@ -726,7 +729,7 @@ body{
     border-radius: 10px;
     background: #c70039;
 }
-.php-progress{
+.python-progress{
     position: absolute;
     top:10%;
     left:1%;
@@ -739,7 +742,7 @@ body{
     background: #c70039;
     transition: all .4s ease;
 }
-.jquery-progress{
+.angular-progress{
     position: absolute;
     top:10%;
     left:1%;
@@ -748,11 +751,11 @@ body{
     align-items: center;
     justify-content: center;
     transition: all .4s ease;
-    width:94%;
+    width:74%;
     border-radius: 10px;
     background: #c70039;
 }
-.seo-progress{
+.react-progress{
     position: absolute;
     top:10%;
     left:1%;
@@ -760,7 +763,33 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    width:84%;
+    width:64%;
+    border-radius: 10px;
+    transition: all .4s ease;
+    background: #c70039;
+}
+.git-progress{
+    position: absolute;
+    top:10%;
+    left:1%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:98%;
+    border-radius: 10px;
+    transition: all .4s ease;
+    background: #c70039;
+}
+.blockchain-progress{
+    position: absolute;
+    top:10%;
+    left:1%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:44%;
     border-radius: 10px;
     transition: all .4s ease;
     background: #c70039;
@@ -1245,7 +1274,7 @@ form button:hover{
     flex-direction: row;
     position: fixed;
     right:-150px;
-    top:40%;
+    top:20%;
     z-index: 4;
     color:black;
     transition:all .4s ease;
@@ -1401,7 +1430,7 @@ For devices with smaller width like mobile phone
         display: none;
     }
     #breaker{
-        height: 50vh;
+        height: 100vh;
         width: 200%;
         background-color: #c70039;
         opacity: 1;
@@ -1428,6 +1457,13 @@ For devices with smaller width like mobile phone
         padding-right: 0px;
         width: auto;
     
+    }
+    .header-content .firstline{
+        z-index: 2;
+        font-weight:700;
+        font-family: poppins;
+        font-variant: small-caps;
+        font-size: 45px;
     }
     #about-content{
         display: flex;
@@ -1856,7 +1892,7 @@ for tabs and large phones
         display: none;
     }
     #breaker{
-        height: 50vh;
+        height: 100vh;
         width: 200%;
         background-color: #c70039;
         opacity: 1;
@@ -1883,6 +1919,13 @@ for tabs and large phones
         padding-right: 0px;
         width: auto;
     
+    }
+    .header-content .firstline{
+        z-index: 2;
+        font-weight:700;
+        font-family: poppins;
+        font-variant: small-caps;
+        font-size: 65px;
     }
     #about-content{
         display: flex;
@@ -2553,3 +2596,33 @@ for tabs and large phones
 
 
 
+    .down-arrow {
+        display: block;
+        text-align: center;
+        margin-top: 50px;
+        font-size: 35px;
+        /* Adjust the size of the icon */
+        /* Change the color of the icon */
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        z-index: 7;
+        animation: bounce 1.5s infinite; /* Bounce animation */
+        cursor: pointer;
+    }
+
+    .down-arrow:hover {
+        transform: translateY(5px);
+        /* Moves the icon slightly down when hovered */
+    }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-15px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
