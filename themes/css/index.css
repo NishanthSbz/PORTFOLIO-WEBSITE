@@ -313,7 +313,7 @@ body {
     font-weight: 700;
     font-family: poppins;
     font-variant: small-caps;
-    font-size: 105px;
+    font-size: 85px;
 }
 
 .header-content .secondline {
@@ -629,7 +629,53 @@ body {
     padding-top: 40px;
 }
 
-.cv a button {
+.cv button {
+    font-size: 16px;
+    opacity: .8;
+    width: auto;
+    font-family: poppins;
+    font-weight: 200;
+    padding: 10px 20px;
+    background: transparent;
+    color: #c70039;
+    transition: all .4s ease;
+    outline: none;
+    margin: 20px;
+    border: 1.5px solid #c70039;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.cv button::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 200%;
+    transform: rotate(-14deg) translateY(-26px);
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: #c70039;
+    transition: all .4s ease;
+}
+
+.cv button:hover {
+    opacity: 1;
+    color: whitesmoke;
+}
+
+.cv button:hover::before {
+    opacity: 1;
+    width: 120%;
+}
+
+.cv button:hover .colors {
+    position: relative;
+    z-index: 4;
+}
+
+/* .cv a button {
     background: transparent;
     border: none;
     padding: 15px 30px;
@@ -637,7 +683,7 @@ body {
     background: #c70039;
     outline: none;
     font-size: 20px;
-    font-family: aileron;
+    font-family: poppins;
     border-radius: 4px;
     font-weight: 400;
     cursor: pointer;
@@ -649,7 +695,7 @@ body {
 .cv a button:hover {
     opacity: 1;
     transform: scale(1.05);
-}
+} */
 
 #services {
     position: relative;
@@ -1794,7 +1840,7 @@ For devices with smaller width like mobile phone
         font-weight: 700;
         font-family: poppins;
         font-variant: small-caps;
-        font-size: 45px;
+        font-size: 30px;
     }
 
     #about-content {
@@ -2360,7 +2406,7 @@ for tabs and large phones
         font-weight: 700;
         font-family: poppins;
         font-variant: small-caps;
-        font-size: 65px;
+        font-size: 45px;
     }
 
     #about-content {
