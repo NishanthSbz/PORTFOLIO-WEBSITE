@@ -37,10 +37,10 @@
 .html-progress{
     background: #c70039;
 }
-.js-progress{
+.js-progress, .figma-progress, .python-progress, .angular-progress, .react-progress, .github-progress, .blockchain-progress{
     background: #c70039;
 }
-.adobe-progress{
+/* .adobe-progress{
     background: #c70039;
 }
 .php-progress{
@@ -51,7 +51,7 @@
 }
 .seo-progress{
     background: #c70039;
-}
+} */
 .portfolio-text h2{
     color: #c70039;
 }
