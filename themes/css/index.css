@@ -80,7 +80,7 @@ body {
 
 #header {
     background: #000000;
-    height: auto;
+    height: 100vh;
     /* Full viewport height */
     width: 100%;
     overflow: hidden;
@@ -97,7 +97,8 @@ body {
     width: 100vw;
     background-size: cover;
     background-position: 50% 50%;
-    display: block;
+    z-index: 3;
+    /* display:flex; */
 }
 
 #navigation-content {
@@ -282,7 +283,7 @@ body {
 .header-content {
     height: 100vh;
     width: 100%;
-    float: left;
+    float: center;
     display: flex;
     position: absolute;
     align-items: center;
@@ -293,20 +294,20 @@ body {
     letter-spacing: 1px;
     flex-direction: column;
     font-size: 50px;
-    z-index: 1;
+    
+    text-align: center;
+    
+
 }
 
 .header-content-box {
-    z-index: 2;
+    z-index: 4;
     text-align: center;
-    height: auto;
     padding-right: 60px;
-    width: auto;
-
 }
 
 .header-content .firstline {
-    z-index: 2;
+    z-index: 4;
     font-weight: 700;
     font-family: poppins;
     font-variant: small-caps;
@@ -314,7 +315,7 @@ body {
 }
 
 .header-content .secondline {
-    z-index: 2;
+    z-index: 4;
     font-size: 30px;
     padding-top: 20px;
     font-weight: 500;
@@ -3134,10 +3135,13 @@ for tabs and large phones
     /* Change the color of the icon */
     cursor: pointer;
     transition: transform 0.3s ease;
-    z-index: 7;
+    z-index: 999;
     animation: bounce 1.5s infinite;
     /* Bounce animation */
     cursor: pointer;
+}
+.down-arrow a{
+    z-index: 999;
 }
 
 .down-arrow:hover {
