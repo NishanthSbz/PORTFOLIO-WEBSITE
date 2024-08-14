@@ -114,10 +114,10 @@ $(function() {
   });
 
 
-  $(window).on('load', function() {
-    // Scroll to the top of the #header when the page is loaded
-    $('html, body').animate({ scrollTop: $('#header').offset().top }, 0);
-  });
+  // $(window).on('load', function() {
+  //   // Scroll to the top of the #header when the page is loaded
+  //   $('html, body').animate({ scrollTop: $('').offset().top }, 0);
+  // });
 
 
   
