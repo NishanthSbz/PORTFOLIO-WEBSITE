@@ -444,11 +444,11 @@ body {
     gap: 7px;
     justify-content: center;
     flex-direction: column;
-    z-index: 11;
+    z-index: 4;
 }
 
 .contact a {
-    z-index: 11;
+    z-index: 4;
 }
 
 .contact img {
