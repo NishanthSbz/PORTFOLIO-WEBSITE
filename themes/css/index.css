@@ -1437,6 +1437,16 @@ button:hover .index {
     pointer-events: none;
 }
 
+.contact-link {
+    text-decoration: none; /* Removes underline */
+    color: #fff; /* Default text color */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.contact-link:hover {
+    color: #007bff; /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
 .contact-form {
     height: 550px;
     padding-right: 40px;
@@ -1464,7 +1474,7 @@ form {
 }
 
 .input-name {
-    width: 40%;
+    width: 84%;
     padding: 10px 20px;
     margin: 14px;
     border-radius: 8px;
@@ -1496,20 +1506,18 @@ form {
     font-family: poppins;
     font-size: 18px;
 }
-
 .input-textarea {
-    width: 84%;
-    padding: 10px 20px;
-    margin: 15px;
-    height: 150px;
-    border-radius: 8px;
-    outline: none;
-    background: #050505;
-    border: none;
-    color: whitesmoke;
-    font-family: poppins;
-    font-size: 18px;
+    width: 100%; /* Full width of the parent container */
+    height: 150px; /* Default height */
+    resize: none; /* Allows vertical resizing only */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    line-height: 1.5;
+    box-sizing: border-box; /* Ensures padding is included in the element's width/height */
 }
+
 
 form button {
     padding: 8px 24px;
@@ -1563,7 +1571,7 @@ form button:hover {
 }
 
 .contact-info-icon-text p {
-    font-size: 14px;
+    font-size: 20px;
     opacity: .7;
 }
 
@@ -1782,9 +1790,9 @@ For devices with smaller width like mobile phone
         text-align: center;
     }
 
-    #contact {
+    /* #contact {
         display: none;
-    }
+    } */
 
     #breaker {
         height: 100vh;
@@ -2052,11 +2060,10 @@ For devices with smaller width like mobile phone
     #navigation-bar img {
         height: 50px;
         position: absolute;
-        top: 15%;
+        top: 25%;
         left: 2.5%;
         opacity: .8;
         transition: all .4s ease;
-        display: none;
     }
 
     .blogs {
@@ -2862,7 +2869,7 @@ for tabs and large phones
         flex-direction: row;
         align-items: center;
         text-align: left;
-        margin-left: 30%;
+        margin-left: 10%;
     }
 
     .hire-me-section {
