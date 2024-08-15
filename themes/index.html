@@ -611,23 +611,24 @@
                         <input id="fromEmail" type="email" placeholder="from (Your Email)" class="input-name" required>
                         <span><a class="clear-icon" onclick="clearField('fromEmail')"><i
                                     class="fas fa-close color"></i></a></span>
-                                    <style>
-                                        .clear-icon {
-                                            position: relative;
-                                            top: 50%;
-                                            transform: translateY(-50%);
-                                            
-                                        }
-                                        .clear-icon i {
-                                            font-size: 15px;
-                                            cursor: pointer;
-                                        }
-                                        .clear-icon i:hover {
-                                            color: red;
-                                            transform: scale(1.2);
-                                        }
-                                    
-                                    </style>
+                        <style>
+                            .clear-icon {
+                                position: relative;
+                                top: 50%;
+                                transform: translateY(-50%);
+
+                            }
+
+                            .clear-icon i {
+                                font-size: 15px;
+                                cursor: pointer;
+                            }
+
+                            .clear-icon i:hover {
+                                color: red;
+                                transform: scale(1.2);
+                            }
+                        </style>
                     </div>
                     <script>
                         function clearField(fieldId) {
@@ -656,12 +657,23 @@
                     const subject = document.getElementById('subject').value;
                     const body = document.getElementById('body').value;
 
-                    // Create the mailto link
-                    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${encodeURIComponent(toEmail)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}&bcc=${encodeURIComponent(fromEmail)}`;
+                    // Detect if the user is on a mobile device
+                    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-                    // Open Gmail in a new tab
+                    let mailtoLink;
+
+                    if (isMobile) {
+                        // Use mailto for mobile devices
+                        mailtoLink = `mailto:${encodeURIComponent(toEmail)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}%0D%0A%0D%0AFrom: ${encodeURIComponent(fromEmail)}`;
+                    } else {
+                        // Use Gmail-specific link for desktop
+                        mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${encodeURIComponent(toEmail)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}&bcc=${encodeURIComponent(fromEmail)}`;
+                    }
+
+                    // Open the appropriate mail client
                     window.open(mailtoLink, '_blank');
                 });
+
 
 
 
@@ -721,7 +733,8 @@
         <!--copyright-section You Can Remove After Downloading-->
         <footer class="footer">
             <div class="footer-text">
-                <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> <span><a href="#about"  class="color" style="text-decoration: none;">Nishanth R</a></span> | All
+                <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> <span><a
+                        href="#about" class="color" style="text-decoration: none;">Nishanth R</a></span> | All
                 Rights Reserved
             </div>
         </footer>
