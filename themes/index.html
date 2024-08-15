@@ -606,21 +606,27 @@
                 </div>
                 <form id="myForm" action="#">
                     <div class="input-line">
-                        <input id="fromEmail" type="email" placeholder="from" class="input-name">
-                        <!-- <input id="toEmail" type="email" placeholder="to" class="input-name"
-                            value="nishanthsbz05@gmail.com"> -->
+                        <input id="fromEmail" type="email" placeholder="from" class="input-name" required>
                     </div>
                     <input type="text" id="subject" placeholder="subject" class="input-subject">
                     <textarea id="body" class="input-textarea" placeholder="message"></textarea>
-                    
-                    <button type="button" id="submit" value="send">Send Mail <i class="fas fa-paper-plane"></i></button>
+                    <button type="submit" id="submit" value="send" class="submit-btn">
+                       Send Mail <i class="fas fa-paper-plane"></i> 
+                    </button>
                 </form>
             </div>
+            
             <script>
-                document.getElementById('submit').addEventListener('click', function () {
-                    // Get values from the form
+                document.getElementById('myForm').addEventListener('submit', function (event) {
+                    event.preventDefault(); // Prevent the form from submitting the traditional way
+
                     const fromEmail = document.getElementById('fromEmail').value;
-                    const toEmail = 'nishanthsbz05@gmail.com'; // Your email address, uneditable
+                    if (!fromEmail) {
+                        alert('Please enter your email address.'); // Show an alert if the email is missing
+                        return;
+                    }
+
+                    const toEmail = 'nishanthsbz05@gmail.com'; // Your email address
                     const subject = document.getElementById('subject').value;
                     const body = document.getElementById('body').value;
 
@@ -630,6 +636,7 @@
                     // Open Gmail in a new tab
                     window.open(mailtoLink, '_blank');
                 });
+
 
 
 
