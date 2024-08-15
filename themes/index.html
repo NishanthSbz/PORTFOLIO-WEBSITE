@@ -97,25 +97,25 @@
                             < </span> / <span class="color">Nishanth </span>R <span class="color"> > </span>
                     </div>
                 </div>
-                    
-                    <div class="secondline">
-                        <span class="txt-rotate color" data-period="1200"
-                            data-rotate='[ "UI/UX Designer...", "Web Developer...", " Coding Enthusiast..." ]'></span>
-                        <span class="slash">|</span>
-                    </div>
-                    <div class="down-arrow">
-                        <a href="#about" class="color">
-                            <i class="fas fa-chevron-down"></i>
-                        </a>
-                    </div>
-                    <div class="contact">
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nishanthsbz05@gmail.com"
-                            target="_blank"><img src="images/mail.png" alt="email-pic"
-                                class="contactpic"></a><!--Your email Id write in place of "#"-->
-                        <a href="Tel:+91 9025861567"><img src="images/call.png" alt="phone-pic"
-                                class="contactpic"></a><!--Your telephone number Id write in place of "#"-->
-                    </div>
-                
+
+                <div class="secondline">
+                    <span class="txt-rotate color" data-period="1200"
+                        data-rotate='[ "UI/UX Designer...", "Web Developer...", " Coding Enthusiast..." ]'></span>
+                    <span class="slash">|</span>
+                </div>
+                <div class="down-arrow">
+                    <a href="#about" class="color">
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
+                <div class="contact">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nishanthsbz05@gmail.com" target="_blank"><img
+                            src="images/mail.png" alt="email-pic"
+                            class="contactpic"></a><!--Your email Id write in place of "#"-->
+                    <a href="Tel:+91 9025861567"><img src="images/call.png" alt="phone-pic"
+                            class="contactpic"></a><!--Your telephone number Id write in place of "#"-->
+                </div>
+
             </div>
             <!--header image-->
             <div class="header-image">
@@ -170,7 +170,8 @@
                         <!--about description-->
                         <span class="about-first-line">
                             I'm a creative
-                            <span class="color">Web  <br></span>Designer & Developer <span class="color"> < </span> / >
+                            <span class="color">Web <br></span>Designer & Developer <span class="color">
+                                < </span> / >
                             </span>
                             <br>
                             <span class="about-second-line"> With <span class="color">2 </span>years of experience in
@@ -607,16 +608,40 @@
                 </div>
                 <form id="myForm" action="#">
                     <div class="input-line">
-                        <input id="fromEmail" type="email" placeholder="from" class="input-name" required>
+                        <input id="fromEmail" type="email" placeholder="from (Your Email)" class="input-name" required>
+                        <span><a class="clear-icon" onclick="clearField('fromEmail')"><i
+                                    class="fas fa-close color"></i></a></span>
+                                    <style>
+                                        .clear-icon {
+                                            position: relative;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            
+                                        }
+                                        .clear-icon i {
+                                            font-size: 15px;
+                                            cursor: pointer;
+                                        }
+                                        .clear-icon i:hover {
+                                            color: red;
+                                            transform: scale(1.2);
+                                        }
+                                    
+                                    </style>
                     </div>
-                    <input type="text" id="subject" placeholder="subject" class="input-subject">
-                    <textarea id="body" class="input-textarea" placeholder="message"></textarea>
+                    <script>
+                        function clearField(fieldId) {
+                            document.getElementById(fieldId).value = '';
+                        }
+                    </script>
+                    <input type="text" id="subject" placeholder="subject" class="input-subject" autocomplete="off">
+                    <textarea id="body" class="input-textarea" placeholder="message" cla></textarea>
                     <button type="submit" id="submit" value="send" class="submit-btn">
-                       Send Mail <i class="fas fa-paper-plane"></i> 
+                        Send Mail <i class="fas fa-paper-plane"></i>
                     </button>
                 </form>
             </div>
-            
+
             <script>
                 document.getElementById('myForm').addEventListener('submit', function (event) {
                     event.preventDefault(); // Prevent the form from submitting the traditional way
