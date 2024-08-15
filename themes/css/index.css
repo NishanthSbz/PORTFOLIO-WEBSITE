@@ -142,7 +142,7 @@ body {
     display: block;
     margin: 6px;
     border-radius: 20px;
-   
+
 }
 
 .menubar .first-span {
@@ -242,7 +242,7 @@ body {
     top: 3%;
     left: 2.5%;
     opacity: .8;
-    z-index:15;
+    z-index: 15;
     cursor: pointer;
     transition: all .4s ease;
 }
@@ -298,7 +298,7 @@ body {
     flex-direction: column;
     font-size: 50px;
     text-align: center;
-    
+
 
 }
 
@@ -369,8 +369,8 @@ body {
     gap: 17px;
     display: flex;
     position: absolute;
-    
-   
+
+
 }
 
 .social-media {
@@ -564,8 +564,11 @@ body {
 }
 
 .about-first-paragraph {
-    color: whitesmoke;
+    display: flex;
     justify-content: center;
+    flex-direction: column;
+    color: whitesmoke;
+    
     font-size: 20px;
     font-family: poppins;
     width: 50%;
@@ -603,7 +606,7 @@ body {
 
 .about-img img {
     width: 100%;
-    height: 380px;
+    height: auto;
     padding: 30px;
     border-radius: 40px;
 }
@@ -699,7 +702,7 @@ body {
 
 #services {
     position: relative;
-    background-color: rgb(32,32,32);
+    background-color: rgb(32, 32, 32);
 
 }
 
@@ -719,12 +722,6 @@ body {
 
 }
 
-.about-first-paragraph {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
 
 .colors {
     color: whitesmoke;
@@ -859,7 +856,14 @@ body {
     overflow: hidden;
 }
 
-.html-progress, .js-progress, .figma-progress, .python-progress, .angular-progress, .react-progress, .github-progress, .blockchain-progress {
+.html-progress,
+.js-progress,
+.figma-progress,
+.python-progress,
+.angular-progress,
+.react-progress,
+.github-progress,
+.blockchain-progress {
     position: absolute;
     top: 10%;
     left: 1%;
@@ -872,14 +876,38 @@ body {
     background: #c70039;
 }
 
-.html-progress { width: 95%; }
-.js-progress { width: 90%; }
-.figma-progress { width: 87%; }
-.python-progress { width: 83%; }
-.angular-progress { width: 74%; }
-.react-progress { width: 64%; }
-.github-progress { width: 98%; }
-.blockchain-progress { width: 44%; }
+.html-progress {
+    width: 95%;
+}
+
+.js-progress {
+    width: 90%;
+}
+
+.figma-progress {
+    width: 87%;
+}
+
+.python-progress {
+    width: 83%;
+}
+
+.angular-progress {
+    width: 74%;
+}
+
+.react-progress {
+    width: 64%;
+}
+
+.github-progress {
+    width: 98%;
+}
+
+.blockchain-progress {
+    width: 44%;
+}
+
 /* 
 .adobe-progress{
     position: absolute;
@@ -1004,6 +1032,7 @@ body {
     /* color: #ffffff; */
     transition: all .4s ease;
 }
+
 .portfolio-text-left p {
     font-size: 16px;
     opacity: .8;
@@ -1060,34 +1089,39 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+
 .buttons-container-left1 {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
+
 .buttons-container-right {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
+
 .buttons-container-right2 {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
+
 @media (max-width: 768px) {
     .buttons-container-left {
         display: flex;
         flex-direction: column;
-       align-items: flex-start;
+        align-items: flex-start;
     }
+
     .buttons-container-right {
         display: flex;
         flex-direction: column;
-       align-items: flex-end;
+        align-items: flex-end;
     }
 }
 
@@ -1112,6 +1146,7 @@ body {
     /* color: #c70039; */
     transition: all .4s ease;
 }
+
 .portfolio-text-right .subtext {
     font-size: 20px;
     font-family: poppins;
@@ -1120,6 +1155,7 @@ body {
     /* color: #ffffff; */
     transition: all .4s ease;
 }
+
 .portfolio-text-right .highlight-text {
     font-size: 25px;
     font-family: poppins;
@@ -1224,7 +1260,7 @@ button:hover .index {
     /* Full viewport height */
     width: 100%;
     overflow-x: hidden;
-    background-color: rgb(32,32,32);
+    background-color: rgb(32, 32, 32);
     color: whitesmoke;
 }
 
@@ -1438,15 +1474,21 @@ button:hover .index {
 }
 
 .contact-link {
-    text-decoration: none; /* Removes underline */
-    color: #fff; /* Default text color */
-    transition: color 0.3s, transform 0.3s; /* Smooth transition */
+    text-decoration: none;
+    /* Removes underline */
+    color: #fff;
+    /* Default text color */
+    transition: color 0.3s, transform 0.3s;
+    /* Smooth transition */
 }
 
 .contact-link:hover {
-    color: #007bff; /* Change color on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    color: #007bff;
+    /* Change color on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge on hover */
 }
+
 .contact-form {
     height: 550px;
     padding-right: 40px;
@@ -1506,16 +1548,21 @@ form {
     font-family: poppins;
     font-size: 18px;
 }
+
 .input-textarea {
-    width: 100%; /* Full width of the parent container */
-    height: 150px; /* Default height */
-    resize: none; /* Allows vertical resizing only */
+    width: 100%;
+    /* Full width of the parent container */
+    height: 150px;
+    /* Default height */
+    resize: none;
+    /* Allows vertical resizing only */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
     line-height: 1.5;
-    box-sizing: border-box; /* Ensures padding is included in the element's width/height */
+    box-sizing: border-box;
+    /* Ensures padding is included in the element's width/height */
 }
 
 
@@ -1771,7 +1818,8 @@ For devices with smaller width like mobile phone
         align-items: center;
         justify-content: center;
     }
-    .contact  {
+
+    .contact {
         width: 100%;
         left: 0;
         bottom: 0;
@@ -1887,7 +1935,7 @@ For devices with smaller width like mobile phone
     }
 
     .about-first-line {
-        font-size: 28px;
+        font-size: 32px;
         opacity: 1;
         margin-bottom: 10px;
         display: block;
@@ -1911,14 +1959,14 @@ For devices with smaller width like mobile phone
 
     .about-img img {
         width: 280px;
-        height: 220px;
+        height: auto;
         padding: 5px;
         border-radius: 10%;
     }
 
     .about-img {
         width: 100%;
-        height: 250px;
+        height: auto;
         text-align: center;
         overflow: hidden;
         border-radius: 10%;
@@ -2341,7 +2389,7 @@ for tabs and large phones
 
     .social-media-links {
         width: 100%;
-        top:80% ;
+        top: 80%;
         bottom: 0;
         position: absolute;
         padding: 20px;
@@ -2358,7 +2406,7 @@ for tabs and large phones
         text-align: center;
     }
 
-   
+
     #breaker {
         height: 100vh;
         width: 200%;
@@ -2475,7 +2523,7 @@ for tabs and large phones
 
     .about-img img {
         width: 100%;
-        height: 380px;
+        height: auto;
         padding: 30px;
         border-radius: 40px;
     }
@@ -2489,13 +2537,18 @@ for tabs and large phones
     }
 
     .cv a button {
-        border: none;
-        padding: 20px 30px;
-        color: whitesmoke;
+        font-size: 16px;
+        opacity: .8;
+        width: auto;
+        font-family: poppins;
+        font-weight: 200;
+        padding: 10px 20px;
+        background: transparent;
+        color: #c70039;
+        transition: all .4s ease;
         outline: none;
-        font-size: 20px;
-        font-family: aileron;
-        border-radius: 8px;
+        margin: 20px;
+        border: 1.5px solid #c70039;
         font-weight: 400;
         cursor: pointer;
         position: relative;
@@ -2901,7 +2954,7 @@ for tabs and large phones
 
     .about-img img {
         width: 100%;
-        height: 450px;
+        height: auto;
         padding: 30px;
         border-radius: 40px;
         animation: opacity 1.4s ease;
@@ -2909,13 +2962,13 @@ for tabs and large phones
 
     .about-img {
         width: 40%;
-        height: 450px;
+        height: auto;
         padding: 30px;
         border-radius: 40px;
     }
 
     .about-first-line {
-        font-size: 45px;
+        font-size: 40px;
         opacity: 1;
         margin-bottom: 10px;
         display: block;
@@ -3210,7 +3263,8 @@ for tabs and large phones
     /* Bounce animation */
     cursor: pointer;
 }
-.down-arrow a{
+
+.down-arrow a {
     z-index: 3;
 }
 
